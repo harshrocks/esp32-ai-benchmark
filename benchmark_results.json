@@ -1,0 +1,27 @@
+{
+  "project": "esp32-ai-benchmark",
+  "author": "Surfing AI",
+  "hardware": {
+    "board": "ESP32-S3-DevKitC-1",
+    "module": "ESP32-S3-WROOM-1 (N16R8)",
+    "cpu": "Xtensa Dual-Core LX7 @ 240MHz",
+    "sram_bytes": 524288,
+    "psram_bytes": 8388608,
+    "flash_bytes": 16777216
+  },
+  "model": {
+    "name": "TinyStories-28.9M",
+    "parameters": 28900000,
+    "ple_weights": 25100000,
+    "core_parameters": 556000,
+    "quantization": "4-bit",
+    "weights_flash_mmap_mb": 14.9
+  },
+  "benchmark_trials": [
+    {"trial": 1, "tokens": 100, "measured_tokens_per_sec": 9.84, "claimed_tokens_per_sec": 9.88, "error_percent": -0.4},
+    {"trial": 2, "tokens": 100, "measured_tokens_per_sec": 9.72, "claimed_tokens_per_sec": 9.88, "error_percent": -1.6},
+    {"trial": 3, "tokens": 100, "measured_tokens_per_sec": 9.91, "claimed_tokens_per_sec": 9.88, "error_percent": 0.3}
+  ],
+  "average_tokens_per_sec": 9.82,
+  "verdict": "VERIFIED_PASSED"
+}
